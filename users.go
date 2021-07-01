@@ -61,7 +61,7 @@ type User struct {
 	Name                           string             `json:"name"`
 	State                          string             `json:"state"`
 	WebURL                         string             `json:"web_url"`
-	CreatedAt                      *time.Time         `json:"created_at"`
+	CreatedAt                      *SemifinishedTime  `json:"created_at"`
 	Bio                            string             `json:"bio"`
 	Location                       string             `json:"location"`
 	PublicEmail                    string             `json:"public_email"`
@@ -80,9 +80,9 @@ type User struct {
 	CanCreateGroup                 bool               `json:"can_create_group"`
 	CanCreateProject               bool               `json:"can_create_project"`
 	ProjectsLimit                  int                `json:"projects_limit"`
-	CurrentSignInAt                *time.Time         `json:"current_sign_in_at"`
-	LastSignInAt                   *time.Time         `json:"last_sign_in_at"`
-	ConfirmedAt                    *time.Time         `json:"confirmed_at"`
+	CurrentSignInAt                *SemifinishedTime  `json:"current_sign_in_at"`
+	LastSignInAt                   *SemifinishedTime  `json:"last_sign_in_at"`
+	ConfirmedAt                    *SemifinishedTime  `json:"confirmed_at"`
 	TwoFactorEnabled               bool               `json:"two_factor_enabled"`
 	Note                           string             `json:"note"`
 	Identities                     []*UserIdentity    `json:"identities"`

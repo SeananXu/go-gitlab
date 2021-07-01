@@ -227,6 +227,20 @@ func (t ISOTime) String() string {
 	return time.Time(t).Format(iso8601)
 }
 
+type SemifinishedTime struct {
+	time []byte
+}
+
+// UnmarshalJSON implements the json.Unmarshaler interface
+func (t *SemifinishedTime) UnmarshalJSON(data []byte) error {
+	t.time = data
+}
+
+// String implements the Stringer interface
+func (t SemifinishedTime) String() string {
+	return string(t.time)
+}
+
 // LinkTypeValue represents a release link type.
 type LinkTypeValue string
 
