@@ -234,6 +234,7 @@ type SemifinishedTime struct {
 // UnmarshalJSON implements the json.Unmarshaler interface
 func (t *SemifinishedTime) UnmarshalJSON(data []byte) error {
 	t.time = data
+	return nil
 }
 
 // String implements the Stringer interface
